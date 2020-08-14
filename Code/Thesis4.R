@@ -19,6 +19,8 @@ credsuisse2012 <- read.csv("/Users/dunk/Thesis/Data/2012WealthData1.csv") #Solve
 credsuisse2011 <- read.csv("/Users/dunk/Thesis/Data/2011WealthData.csv")
 credsuisse2010 <- read.csv("/Users/dunk/Thesis/Data/2010WealthData.csv") #Put in 0's where NA most of the time, also note that under 1000 and under 10000 columns need to be merged, no over 1 million column
 credsuisse2010$X <- NULL
+
+
 credsuisselist <- list(credsuisse2011, credsuisse2012, credsuisse2013, credsuisse2014, credsuisse2015, credsuisse2016, 
                        credsuisse2017, credsuisse2018, credsuisse2019)
 
@@ -50,7 +52,7 @@ testdf <- do.call("rbind", list(credsuisse2019, credsuisse2018, credsuisse2017, 
 testdf1 <- #do a left join for credsuisse2010
   
   
-  countryList <- unique(as.character(wealthoecdData$Country))
+countryList <- unique(as.character(wealthoecdData$Country))
 oecdf <- testdf %>% filter(Country %in% countryList)
 colnames(oecdf) <- c("Country", "Adults (Thousands)", "Mean Wealth per Adult", "Median Wealth per Adult", 
                      "Under 10,000", "10,000-100,000", "100,000-1 Million",
