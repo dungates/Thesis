@@ -527,7 +527,6 @@ names(propertytaxData1)[1] <- "Country" #Ok this works
 # colnames(personalincomeData1) just testing to make sure
 # initialdata <- merge(wealthoecdData, taxwedgeData1, by = 'Country')
 # Merging the dataframes function
-# Maybe add proportion of retired people, social wealth fund as a dummy variable
 bigdata <- do.call("rbind", list(taxrevenueData1, corpprofitData1, socialsecuritycontribData1, personalincomeData1, 
                                  payrolltaxData1, goodsandservicesData1, socialbenshouseholdData1, socialspendingData1, taxwedgeData1,
                                  publicunempspendingData1, publiclabormktspendingData1, propertytaxData1, ginicoefficientData1, gdpData1))

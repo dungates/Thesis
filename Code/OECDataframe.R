@@ -100,6 +100,7 @@ gdpData1 <- gdpData %>% mutate(LOCATION = if_else(LOCATION == "AUS", "Australia"
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -138,6 +139,7 @@ ginicoefficientData1 <- ginicoefficientData %>% mutate(LOCATION = if_else(LOCATI
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -176,6 +178,7 @@ taxwedgeData1 <- taxwedgeData %>% mutate(LOCATION = if_else(LOCATION == "AUS", "
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -214,6 +217,7 @@ personalincomeData1 <- personalincomeData %>% mutate(LOCATION = if_else(LOCATION
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -252,6 +256,7 @@ taxrevenueData1 <- taxrevenueData %>% mutate(LOCATION = if_else(LOCATION == "AUS
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -290,6 +295,7 @@ corpprofitData1 <- corpprofitData %>% mutate(LOCATION = if_else(LOCATION == "AUS
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -328,6 +334,7 @@ socialsecuritycontribData1 <- socialsecuritycontribData %>% mutate(LOCATION = if
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -366,6 +373,7 @@ payrolltaxData1 <- payrolltaxData %>% mutate(LOCATION = if_else(LOCATION == "AUS
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -404,6 +412,7 @@ goodsandservicesData1 <- goodsandservicesData %>% mutate(LOCATION = if_else(LOCA
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -442,6 +451,7 @@ socialbenshouseholdData1 <- socialbenshouseholdData %>% mutate(LOCATION = if_els
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -480,6 +490,7 @@ socialspendingData1 <- socialspendingData %>% mutate(LOCATION = if_else(LOCATION
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -518,6 +529,7 @@ publicunempspendingData1 <- publicunempspendingData %>% mutate(LOCATION = if_els
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -556,6 +568,7 @@ publiclabormktspendingData1 <- publiclabormktspendingData %>% mutate(LOCATION = 
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -594,6 +607,7 @@ propertytaxData1 <- propertytaxData %>% mutate(LOCATION = if_else(LOCATION == "A
   mutate(LOCATION = if_else(LOCATION == "DEU", "Germany", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "GRC", "Greece", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "HUN", "Hungary", LOCATION)) %>% 
+  mutate(LOCATION = if_else(LOCATION == "ISL", "Iceland", LOCATION)) %>%
   mutate(LOCATION = if_else(LOCATION == "IRL", "Ireland", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ISR", "Israel", LOCATION)) %>% 
   mutate(LOCATION = if_else(LOCATION == "ITA", "Italy", LOCATION)) %>% 
@@ -652,7 +666,7 @@ testdata <- testdata %>%
   mutate(Region = case_when(Country %in% euList ~ "EU", Country %in% americasList ~ "Americas", Country %in% asiaList ~ "Asia",
                             Country %in% oceaniaList ~ "Oceania"))
 
-# Run to here for dataframe
+# Run to here for dataframe make sure to include all the code above
 
 write_csv(testdata, "/Users/dunk/Thesis/Data/PanelData.csv")
 
