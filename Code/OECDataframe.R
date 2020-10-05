@@ -37,11 +37,14 @@ credsuisse2015 <- credsuisse2015 %>% mutate(Country = gsub("Slovakia", "Slovak R
 credsuisse2014 <- credsuisse2014 %>% mutate(Year = 2014)
 credsuisse2014 <- credsuisse2014 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country))
 credsuisse2013 <- credsuisse2013 %>% mutate(Year = 2013)
-credsuisse2013 <- credsuisse2013 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country))
+credsuisse2013 <- credsuisse2013 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country),
+                                            Country = gsub("United States of America", "United States", Country))
 credsuisse2012 <- credsuisse2012 %>% mutate(Year = 2012)
-credsuisse2012 <- credsuisse2012 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country))
+credsuisse2012 <- credsuisse2012 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country),
+                                            Country = gsub("United States of America", "United States", Country))
 credsuisse2011 <- credsuisse2011 %>% mutate(Year = 2011)
-credsuisse2011 <- credsuisse2011 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country))
+credsuisse2011 <- credsuisse2011 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country),
+                                            Country = gsub("United States of America", "United States", Country))
 
 credsuisselist <- list(credsuisse2011, credsuisse2012, credsuisse2013, credsuisse2014, credsuisse2015, credsuisse2016, 
                        credsuisse2017, credsuisse2018, credsuisse2019)
@@ -58,7 +61,8 @@ colnames(oecdf) <- c("Country", "Adults (Thousands)", "Mean Wealth per Adult", "
                      "Under 10,000", "10,000-100,000", "100,000-1 Million",
                      "Over 1 Million", "Total","Gini","Year")
 
-credsuisse2010 <- credsuisse2010 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country))
+credsuisse2010 <- credsuisse2010 %>% mutate(Country = gsub("Slovakia", "Slovak Republic", Country), 
+                                            Country = gsub("United States of America", "United States", Country))
 credsuisse2010 <- credsuisse2010 %>% filter(Country %in% countryList)
 credsuisse2010 <- subset(credsuisse2010, select = -c(`Under 1,000`, `10,00-100,00`, `100,00-100,000`,`Over 100,000`))
 credsuisse2010 <- credsuisse2010 %>% mutate(`Under 10,000` = paste(NA), `10,000-100,000` = paste(NA), 
@@ -666,9 +670,28 @@ testdata <- testdata %>%
   mutate(Region = case_when(Country %in% euList ~ "EU", Country %in% americasList ~ "Americas", Country %in% asiaList ~ "Asia",
                             Country %in% oceaniaList ~ "Oceania"))
 
+df <- readxl::read_xlsx("/Users/dunk/Thesis/Data/WIID_06MAY2020 (1).xlsx")
+df <- df %>% dplyr::mutate(country = ifelse(country == "Czechia", "Czech Republic", country)) %>% 
+  dplyr::mutate(country = ifelse(country == "Korea, Republic of", "Korea", country)) %>%  
+  dplyr::mutate(country = ifelse(country == "Slovakia", "Slovak Republic", country))
+df <- df %>% filter(year > 2009) %>% group_by(country) %>% distinct(year, .keep_all = T) %>% ungroup %>% filter(country %in% countryList)
+df <- df %>% select(country, gini_reported, year)
+
+colnames(df) <- c("country", "incomegini", "year")
+
+colnames(testdata)[11] <- "Date"
+testdata <- testdata %>% mutate(Year = lubridate::year(Date))
+
+test <- testdata %>% left_join(df, by = c("Country" = "country", "Year" = "year"))
+test <- test %>% mutate(incomeGini = incomeGini %>% is.na %>% ifelse(incomegini, incomeGini))
+test <- select(test, -incomegini)
+
+
+
+
 # Run to here for dataframe make sure to include all the code above
 
-write_csv(testdata, "/Users/dunk/Thesis/Data/PanelData.csv")
+write_csv(test, "/Users/dunk/Thesis/Data/PanelData.csv")
 
 
 

@@ -60,20 +60,20 @@ colnames(oecdf) <- c("Country", "Adults (Thousands)", "Mean Wealth per Adult", "
 
 ### Reading in OECD country wide tax/social benefit data and then merging data frame
 
-ginicoefficientData = read_csv("/Users/dunk/Downloads/DP_LIVE_29052020183720697.csv") #id is country make sure to account for country names
-personalincomeData = read_csv("/Users/dunk/Downloads/DP_LIVE_14052020000648509.csv") #id is LOCATION
-taxwedgeData = read_csv("/Users/dunk/Downloads/DP_LIVE_14052020060120339.csv") #LOCATION
-taxrevenueData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020175635356.csv") #LOCATION
-corpprofitData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020175843841.csv") #LOCATION
-socialsecuritycontribData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020175914201.csv") #LOCATION
-payrolltaxData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020175940921.csv") #LOCATION
-goodsandservicesData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020180027421.csv") #LOCATION
-socialbenshouseholdData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020174153455.csv") #LOCATION
-socialspendingData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020174206627.csv") #LOCATION
-publicunempspendingData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020174212424.csv") #LOCATION
-publiclabormktspendingData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020174217033.csv") #LOCATION
-propertytaxData = read_csv("/Users/dunk/Downloads/DP_LIVE_28052020174310236.csv") #LOCATION
-gdpData = read_csv("/Users/dunk/Downloads/DP_LIVE_04082020233322920.csv")
+ginicoefficientData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_29052020183720697.csv") #id is country make sure to account for country names
+personalincomeData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_14052020000648509.csv") #id is LOCATION
+taxwedgeData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_14052020060120339.csv") #LOCATION
+taxrevenueData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020175635356.csv") #LOCATION
+corpprofitData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020175843841.csv") #LOCATION
+socialsecuritycontribData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020175914201.csv") #LOCATION
+payrolltaxData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020175940921.csv") #LOCATION
+goodsandservicesData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020180027421.csv") #LOCATION
+socialbenshouseholdData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020174153455.csv") #LOCATION
+socialspendingData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020174206627.csv") #LOCATION
+publicunempspendingData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020174212424.csv") #LOCATION
+publiclabormktspendingData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020174217033.csv") #LOCATION
+propertytaxData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_28052020174310236.csv") #LOCATION
+gdpData = read_csv("/Users/dunk/Thesis/Data/DP_LIVE_04082020233322920.csv")
 #See about top marginal income tax rate, indicator variable for wealth tax?
 
 gdpData1 <- gdpData %>% mutate(LOCATION = if_else(LOCATION == "AUS", "Australia", LOCATION)) %>% 

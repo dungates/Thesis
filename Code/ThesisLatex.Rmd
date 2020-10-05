@@ -1,0 +1,14 @@
+---
+title: "ThesisLatex"
+author: "Duncan Gates"
+date: "10/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+$WealthGini_i = \beta_0 + \beta_1IncomeGini_i + \beta_2Z_i + \mu_{it}$
+
+$WealthGini_i = \beta_1()$
